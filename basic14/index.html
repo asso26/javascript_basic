@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 반복문-for,do while,while </title>
+</head>
+
+<body>
+    <script>
+        // 반복문-for문,do while문,while문
+
+        //while문
+        // while(조건문){
+        // 실행문
+        //증가감식;
+        //}
+        let x = 0;
+        while (x < 5) {
+            console.log(x)
+            x++;
+        }
+        //9/2 => 4 몫
+        //9%2 => 1 나머지
+   /*      let y = 0;
+        while (y < 10) {
+            if (y % 2==0){
+                continue;
+            }
+            console.log(y)
+        } */
+
+        let m=0;
+        while(m<10){
+            m++;
+            if(m==5){
+                break;//while 전체에서 벗어남
+            }
+            console.log("m:",m)
+        }
+    </script>
+
+</body>
+
+</html>

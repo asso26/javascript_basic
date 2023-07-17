@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //객체:관련된 정보를 묶어서 하나의 데이터로 저장을 하게 해준다
+
+        let patient = {
+            //key:key-value
+            name: "홍길동",
+            age: 17,
+            disease: "cold"
+        }
+        console.log(patient)
+        console.log(patient.age)
+        console.log(patient['age'])
+        patient.name = '박말자'
+        console.log(patient)
+        patient['age'] = 25;
+        console.log(patient)
+
+        let patientList = [{
+                name: "nolbu",
+                age: 13
+            },
+            {
+                name: "hunbu",
+                age: 12
+            },
+            {
+                name: "jeabi",
+                age: 30
+            },
+        ]
+
+        console.log(patientList)
+        console.log("두번째 환자", patientList[1])
+        console.log("두번째 환자의 이름", patientList[1].name)
+        console.log("두번째 환자의 이름", patientList[1]["name"])
+        console.log("두번째 환자의 나이", patientList[1].age)
+        console.log("두번째 환자의 나이", patientList[1]["age"])
+
+        //배열
+        let 남학생1 = "노과장";
+        let 남학생2 = "허과장";
+        let 남학생3 = "서주임";
+        let 남학생4 = "김대리";
+        let 남학생5 = "송주임";
+
+        let 우리반남학생 = ["노과장", "허과장", "서주임", "김대리", "송주임"]
+        console.log(우리반남학생)
+        console.log(우리반남학생[4])
+        console.log(우리반남학생[2])
+
+        우리반남학생[3] = "태양"
+        console.log(우리반남학생)
+
+        //배열과 함께 쓰는 함수
+        우리반남학생.pop(); //마지막 요소를 빼낸다
+        console.log(우리반남학생)
+
+        우리반남학생.push("gd");
+        console.log(우리반남학생)
+
+        //.includes(" "):해당 아이템을 배열이 포함하고 있는지 알려줌(true/false)
+        console.log(우리반남학생.includes("서주임")) //서주임이라는 사람이 있는가? true
+        console.log(우리반남학생.indexOf("서주임")) //index번호를 출력해줌-> 2
+
+        // .slice(시작점) 부터 시작해서 뒤를 잘라내라
+        console.log(우리반남학생.slice(3)) // 3번 태양 4번 gd가 잘림
+
+        //.slice(1,3)=> 1이상 3미만 잘림
+        console.log(우리반남학생.slice(1, 3)) //허과장, 서주임이 잘림
+
+        console.log(우리반남학생) // (5) ['노과장', '허과장', '서주임', '태양', 'gd']
+
+        //3번부터 2개를 잘라낸다 splice는 배열 자체를 손상낸다
+        console.log(우리반남학생.splice(3, 2))//'태양', 'gd'가 잘림 영원히
+
+        console.log(우리반남학생) // ['노과장', '허과장', '서주임']
+
+    </script>
+</body>
+
+</html>
